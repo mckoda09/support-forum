@@ -37,7 +37,7 @@ bot
   .chatType("supergroup")
   .filter(c => c.chatId == groupId)
   .filter(c => c.msg?.message_thread_id != 1)
-  .filter(c => c.msg?.text ? (c.msg?.text.startsWith("!") ? true : false) : true)
+  .filter(c => c.msg?.text ? (c.msg?.text.startsWith("!") ? false : true) : true)
   .on("msg", async (c) => {
     const userId = await getUserByTopic(c.msg.message_thread_id!);
     if (!userId) return await c.react("👻");
