@@ -1,0 +1,19 @@
+{
+  "imports": {
+    "grammy": "https://deno.land/x/grammy@v1.35.0/mod.ts"
+  },
+  "tasks": {
+    "start": "deno run -A --watch dev.ts"
+  },
+  "unstable": [
+    "kv"
+  ],
+  "deploy": {
+    "project": "95730c2c-1f34-4c5d-bc10-cdfb182f1503",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "deploy.ts"
+  }
+}
